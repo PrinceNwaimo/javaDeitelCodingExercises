@@ -1,2 +1,4 @@
-package HareTortoiseGame;public class HareMove {
+package HareTortoiseGame;
+
+public enum HareMove {
 }

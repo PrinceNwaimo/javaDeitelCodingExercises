@@ -1,2 +1,8 @@
-package EstoreApp;public enum CardType {
+package EstoreApp;
+
+public enum CardType {
+    MASTERCARD,
+    VERVERCARD,
+    VISACARD,
+    AMERICANEXPRESS
 }

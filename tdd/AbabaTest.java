@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class AbabaTest {
+import org.junit.jupiter.api.Test;
+
+public class AbabaTest {
+
 }

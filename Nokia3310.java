@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class Nokia3310 {
+public class Nokia3310 {
 }
