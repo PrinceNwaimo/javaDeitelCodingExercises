@@ -11,12 +11,12 @@ class PhoneBookTest {
     @BeforeEach
     public void setUp(){
         userPhoneBook = new PhoneBook();
-        userPhoneBook.createContact("Prince","Nwaimo","07037178521");
+        userPhoneBook.createContact("Prince","Nwaimo","07037178521","git");
     }
     @Test
     public void testThatContactIsCreated(){
         userPhoneBook = new PhoneBook();
-        userPhoneBook.createContact("Prince","Nwaimo","07037178521");
+        userPhoneBook.createContact("Prince","Nwaimo","07037178521","git");
         assertEquals(1,userPhoneBook.getNumberOfContacts());
 
     }
@@ -44,12 +44,12 @@ class PhoneBookTest {
 }
 @Test
     public void testThatContactCanBeAdded(){
-        userPhoneBook.addContact("Peter","Nono","453",27);
+        userPhoneBook.addContact("Peter","Nono","453",27,"git");
         assertEquals(2,userPhoneBook.getNumberOfContacts());
 }
 @Test
     public void testThatContactIsDeleted(){
-        userPhoneBook.deleteContact(27);
+        userPhoneBook.deleteContact("Prince");
         assertEquals(2,userPhoneBook.getNumberOfContacts());
 
 }

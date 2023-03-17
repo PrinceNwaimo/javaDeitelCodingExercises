@@ -48,7 +48,8 @@ public class PhoneBookApp {
         String firstName = input("Enter your first name");
         String lastName = input("Enter your last name");
         String phoneNumber = (input("Enter your phone number"));
-        Ababa.createContact(firstName,lastName,phoneNumber);
+        String emailAddress = input("Enter your EmailAddress");
+        Ababa.createContact(firstName,lastName,phoneNumber,emailAddress);
         display("Entry created successfully");
         MainMenu();
     }
@@ -77,8 +78,8 @@ public class PhoneBookApp {
         MainMenu();
     }
     private static void deleteContact(){
-        int ID = Integer.parseInt(input("Enter your ID"));
-        String contact =String.format("Contact deleted successfully",Ababa.deleteContact(ID));
+        String firstName =input("Enter first name");
+        String contact =String.format("Contact deleted successfully",Ababa.deleteContact(firstName));
         try {
             display(contact);}
         catch (IllegalArgumentException ex){
@@ -88,10 +89,13 @@ public class PhoneBookApp {
         MainMenu();
     }
     private static void findContact(){
-        int ID = Integer.parseInt(input("Enter ID"));
-        String contact = String.format("Contact  found",Ababa.findContact(ID));
-        viewContact();
+        String firstname = input("Enter firstname");
+        Contact foundContact = Ababa.findContact(firstname);
 
+//        Contact contact = String.format("Contact  found",Ababa.findContact(ID));
+//        return
+        display(String.valueOf(foundContact));
+        MainMenu();
     }
 
 
