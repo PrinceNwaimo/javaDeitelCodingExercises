@@ -7,7 +7,7 @@ public class ConsumerSample {
         Consumer<String> consumer = System.out::println;
         consumerDeclarative.accept("Zainab");
         consumerImperative("Prince");
-        consumerDeclarative.andThen(after)
+//        consumerDeclarative.andThen(after)
     }
     static Consumer<String> consumerDeclarative = name-> System.out.println(name);
     static Consumer<Integer> after = name-> System.out.println(name);
